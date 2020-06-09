@@ -67,10 +67,11 @@
                             <input type="text" name="time">
                         </div>
                     </div>
-                    <div class="field-group">
+                    <div class="field-group" >
                         <div class="field">
                             <label for="description"> Descrição </label>
-                            <input type="description" name="description">
+                            <textarea name="description" cols="30" rows="5">                                
+                            </textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -79,9 +80,24 @@
                         <h2>Selecione o tipo de entidade</h2>
                     </legend>
                     <div class="place-grid">
-                        
+                        <li data-id="petshop">
+                            <img src="/assets/petshop.svg" alt="Petshop">
+                            <span>
+                                Petshop
+                            </span>
+                        </li>
+                            <li data-id="donate">
+                                <img src="" alt="adoção">
+                                <span>
+                                    Adoção
+                                </span>
+                            </li>
                     </div>
+                    <input type="hidden" name="items">
                 </fieldset>
+                <button type="submit">
+                    Cadastrar entidade
+                    </button>
                 </form>
             </div>
         </div>
