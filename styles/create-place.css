@@ -4,14 +4,38 @@
 
     margin: 0 auto;
 }
+
+.create-place header{
+    margin-left: 1100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-place header span{
+    background-image: url(../assets/enter.svg);
+    display: flex;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 130px;
+    top: 23px;
+}
+
 form{
     background-color: white;
     margin: 80px auto;
     margin-top: 80px;
-    padding: 50px;
+    padding: 40px;
     border-radius: 8px;
     max-width: 700px;
 
+}
+
+form legend h2{
+    color: #d38d7c;
+    
 }
 
 form fieldset{
@@ -20,7 +44,7 @@ form fieldset{
 }
 
 form legend{
-    margin-bottom: 40px;
+margin-bottom: 40px;
  display: flex;
  align-items: center;
  justify-content: space-between;
@@ -73,7 +97,7 @@ form button{
     border: 0;
     border-radius: 10px;
     margin-top: 50px;
-    margin-left: 360px;
+    margin-left: 380px;
     transition: 400ms;
     outline: none;
 
@@ -83,4 +107,49 @@ form button:hover{
     background-color: #d38d7c;
 }
 
+.place-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+.place-grid li{
+    background-color: #e6e6e6;
+    list-style: none;
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 35px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.place-grid li span{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.place-grid li img{
+    display: grid;
+    height: 60px;
+    width: 70px;
+}
+
+.place-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.place-grid li img,
+.place-grid li span{
+    pointer-events: none;
+}
