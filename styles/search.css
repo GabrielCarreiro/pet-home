@@ -1,0 +1,53 @@
+#page-search header{
+    margin-left: 1250px;
+    margin-top: 30px;
+}
+
+#page-search header a{
+    font-size: 20px;
+}
+
+#page-search header span{
+	
+	background-image: url(../assets/enter.svg);
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 120px;
+    top: 25px;
+}
+
+.content form{
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 420px;
+    padding: 10px;
+}
+.content form label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 8px;
+}
+.content form .search-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content form input{  
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px 0 0 10px;
+    border: 0;
+}
+
+.content form button{
+    height: 50px;
+    width: 72px;
+    border-radius: 0 10px 10px 0;
+    border: 0;
+    transition: 400ms;
+}
+.content form button:hover{
+    background-color: #d38d7c;;
+}
