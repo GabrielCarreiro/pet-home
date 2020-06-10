@@ -4,7 +4,7 @@
   "description": "Aplicação web para localizar o petshop mais proximo da sua região",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/GabrielCarreiro/PetHome/issues"
   },
-  "homepage": "https://github.com/GabrielCarreiro/PetHome#readme"
+  "homepage": "https://github.com/GabrielCarreiro/PetHome#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }

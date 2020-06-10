@@ -1,0 +1,5 @@
+
+node_modules/.bin/is-ci
+*.cmd
+*.ps1
+node_modules/.bin/mime
