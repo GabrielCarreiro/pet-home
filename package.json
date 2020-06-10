@@ -1,0 +1,20 @@
+{
+  "name": "PetHome",
+  "version": "1.0.0",
+  "description": "Aplicação web para localizar o petshop mais proximo da sua região",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielCarreiro/PetHome.git"
+  },
+  "keywords": [],
+  "author": " Gabriel Carreiro dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielCarreiro/PetHome/issues"
+  },
+  "homepage": "https://github.com/GabrielCarreiro/PetHome#readme"
+}
