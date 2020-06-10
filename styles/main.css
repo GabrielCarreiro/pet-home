@@ -4,6 +4,8 @@
 :root{
     --primary-color: #010497;
     --title-color: #eed3cc;
+    --second-color: #d38d7c;
+    --white-color: #dbdbdb;
 }
 
 html{

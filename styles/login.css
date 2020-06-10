@@ -37,37 +37,35 @@ body{
 }
 
 .content header{
-	margin-top: 20px;
-	margin-left: 1100px;
-	font-size: 18px;
-	font-family: 'Exo', sans-serif;
-	font-weight: 200;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+    margin-left: 1225px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.content header{
+    font-size: 18px;
+}
 .content header span{
-	
-	
-	background-image: url(../assets/enter.svg);
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	right: 220px;
-	top: 15px;
-	
+    background-image: url(../assets/enter.svg);
+    display: flex;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 208px;
+    top: 22px;
 }
 
-.header{
+
+.title{
 	position: absolute;
 	top: calc(50% - 130px);
 	left: calc(50% - 55px);
 	z-index: 2;
 }
 
-.header div{
+.title div{
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
@@ -75,7 +73,7 @@ body{
 	font-weight: 200;
 }
 
-.header div span{
+.title div span{
 	color: #010497;
 }
 

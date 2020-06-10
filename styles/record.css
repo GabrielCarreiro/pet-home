@@ -1,13 +1,25 @@
 
 #page-record .content header{
-   display: flex;
-    margin-top: 20px;
-    margin-left: 1250px;
-    font-family: 'Exo',sans-serif;
-    font-size: 18px;
-    font-weight: bold;
+    margin-left: 1225px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+#page-record .content header{
+    font-size: 18px;
+}
+
+#page-record .content header span{
+    background-image: url(../assets/enter.svg);
+    display: flex;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 130px;
+    top: 23px;
+}
 
 form{
     background-color: white;
@@ -41,7 +53,7 @@ form .field{
 }
 
 form input{
-    background-color: #f0f0f5;
+    background-color: #dbdbdb;
     border: 0;
     padding: 16px 24px;
     font-size: 16px;
