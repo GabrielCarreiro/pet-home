@@ -10,24 +10,27 @@ server.use(express.static("public"))
 
 // Configurando o templete engine
 const nunjucks = require("nunjucks")
-nunjucks.configure("src/views")
+nunjucks.configure("src/views",{
+    express: server,
+    noCache: true
+})
 
 //Configurar Caminhos da minha aplicação
 //Configurando a pagina inical
 server.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html")
+     return res.render("index.html")
 
 })
 
 // Configurando o caminho do record
 
 server.get("/record", (req, res) => {
-    res.sendFile(__dirname + "/views/record.html")
+    return res.render("record.html")
 
 })
 
 server.get("/create-place", (req, res) => {
-    res.sendFile(__dirname + "/views/create-place.html")
+    return res.render("create-place.html")
 
 })
 
