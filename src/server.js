@@ -29,8 +29,24 @@ server.get("/record", (req, res) => {
 
 })
 
+// Configurando o caminho do create-place
+
 server.get("/create-place", (req, res) => {
     return res.render("create-place.html")
+
+})
+
+// Configurando o caminho do search
+
+server.get("/search", (req, res) => {
+    return res.render("search.html")
+
+})
+
+// Configurando o caminho do page-results
+
+server.get("/page-results", (req, res) => {
+    return res.render("page-results.html")
 
 })
 

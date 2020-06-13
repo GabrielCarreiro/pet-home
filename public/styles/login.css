@@ -41,10 +41,11 @@ body{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+	align-items: center;
+	
 }
 
-.content header{
+.content header a{
     font-size: 18px;
 }
 .content header span{
