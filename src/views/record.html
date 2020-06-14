@@ -1,51 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Cadastra-se</title>
+{% endblock title %}
+
+{% block styles %}
     <link rel="stylesheet" href="/styles/record.css">
-    <title>Registra-se</title>
-</head>
-<body>
-    <div id="page-record"> 
-    <div class="content">
-        <header>
-            <a href="/"> <span></span> Voltar </a>
-        </header>
-        <form action="">
+{% endblock styles %}
+
+
+{% block content %}
+    <div id="page-record">
+        <div class="content">
+            <header>
+                <a href="/">
+                    <span></span>
+                    Voltar
+                </a>
+            </header>
+            <form action="">
                 <legend>
-                    <h2>Dados do Usuário </h2>
+                    <h2>Dados do Usuário
+                    </h2>
                 </legend>
-            <div class="field-group">
-                <div class="field">
-                    <label for="name"> Digite seu nome </label>
-                    <input type="text" name="name">
+                <div class="field-group">
+                    <div class="field">
+                        <label for="name">
+                            Digite seu nome
+                        </label>
+                        <input type="text" name="name">
+                    </div>
                 </div>
-            </div>
-            <div class="field-group">
-                <div class="field">
-                    <label for="user"> Usuario </label>
-                    <input type="text" name="user">
+                <div class="field-group">
+                    <div class="field">
+                        <label for="user">
+                            Usuario
+                        </label>
+                        <input type="text" name="user">
+                    </div>
                 </div>
-            </div>
-            <div class="field-group">
-                <div class="field">
-                    <label for="email"> Email </label>
-                    <input type="text" name="email">
+                <div class="field-group">
+                    <div class="field">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input type="text" name="email">
+                    </div>
                 </div>
-            </div>         
-            <div class="field-group">
-                <div class="field">
-                    <label for="password"> Digite sua senha </label>
-                    <input type="password" name="password">
+                <div class="field-group">
+                    <div class="field">
+                        <label for="password">
+                            Digite sua senha
+                        </label>
+                        <input type="password" name="password">
+                    </div>
                 </div>
-            </div>
-            <button type="submit">
+                <button type="submit">
                     Cadastrar Usuário
-            </button>
-        </form>
-    </div>  
-</div> 
-</body>
-</html>
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
