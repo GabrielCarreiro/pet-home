@@ -12,7 +12,29 @@ db.serialize(() => {
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTERGER KEY AUTOINCREMENT,
+            name TEXT,
+            address TEXT,
+            state TEXT,
+            city TEXT,
+            phone TEXT,
+            whatsapp TEXT,
+            image TEXT,
+            time TEXT,
+            description TEXT,
+            items TEXT
+
         );
+
+        CREATE TABLE IF NOT EXISTS client (
+            id INTERGER KEY AUTOINCREMENT,
+            name TEXT,
+            user TEXT,
+            email TEXT,
+            password TEXT
+        );
+
     `)
-    
+
+    // Inserindo dados na tabelas
+
 })
