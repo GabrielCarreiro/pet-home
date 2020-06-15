@@ -4,28 +4,33 @@
     <title>Cadastrar Local</title>
 {% endblock title %}
 
- {% block styles %}
+{% block styles %}
     <link rel="stylesheet" href="/styles/create-place.css">
 {% endblock styles %}
 
 {% block content %}
-        <div class="create-place">
-            <div class="content">
-                   {%include "partials/page-header.html" %}
-                <form action="">
-                    <fieldset>
+    <div class="create-place">
+        <div class="content">
+            {%include "partials/page-header.html" %}
+            <form action="">
+                <fieldset>
                     <legend>
-                        <h2> Cadastrar Local</h2>
+                        <h2>
+                            Cadastrar Local</h2>
                     </legend>
                     <div class="field-group">
                         <div class="field">
-                            <label for="name"> Nome da entidade </label>
+                            <label for="name">
+                                Nome da entidade
+                            </label>
                             <input type="text" name="name">
                         </div>
                     </div>
                     <div class="field-group">
                         <div class="field">
-                            <label for="address"> Endereço da entidade </label>
+                            <label for="address">
+                                Endereço da entidade
+                            </label>
                             <input type="text" name="address">
                         </div>
                     </div>
@@ -48,29 +53,38 @@
                     </div>
                     <div class="field-group">
                         <div class="field">
-                            <label for="phone"> Telefone </label>
+                            <label for="phone">
+                                Telefone
+                            </label>
                             <input type="text" name="phone">
-                        </div>         
+                        </div>
                         <div class="field">
-                            <label for="whatsapp"> Whatsapp </label>
+                            <label for="whatsapp">
+                                Whatsapp
+                            </label>
                             <input type="text" name="whatsapp">
                         </div>
                     </div>
                     <div class="field-group">
                         <div class="field">
-                            <label for="image"> Imagem </label>
+                            <label for="image">
+                                Imagem
+                            </label>
                             <input type="text" name="image">
-                        </div>         
+                        </div>
                         <div class="field">
-                            <label for="time"> Horário de funcionamento </label>
+                            <label for="time">
+                                Horário de funcionamento
+                            </label>
                             <input type="text" name="time">
                         </div>
                     </div>
                     <div class="field-group">
                         <div class="field">
-                            <label for="description"> Descrição </label>
-                            <textarea name="description" cols="30" rows="5">                                
-                            </textarea>
+                            <label for="description">
+                                Descrição
+                            </label>
+                            <textarea name="description" cols="30" rows="5"></textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -85,20 +99,20 @@
                                 Petshop
                             </span>
                         </li>
-                            <li data-id="donate">
-                                <img src="/assets/adocao.svg" alt="adoção">
-                                <span>
-                                    Adoção
-                                </span>
-                            </li>
+                        <li data-id="donate">
+                            <img src="/assets/adocao.svg" alt="adoção">
+                            <span>
+                                Adoção
+                            </span>
+                        </li>
                     </div>
                     <input type="hidden" name="items">
                 </fieldset>
                 <button type="submit">
                     Cadastrar entidade
-                    </button>
-                </form>
-            </div>
+                </button>
+            </form>
         </div>
-        <script src="/scripts/create-place.js"></script>
+    </div>
+    <script src="/scripts/create-place.js"></script>
 {% endblock content %}

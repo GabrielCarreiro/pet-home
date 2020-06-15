@@ -1,27 +1,26 @@
 {% extends "layout.html" %}
 
-
- {% block styles %}
-	<link rel="stylesheet" href="styles/login.css">
- {% endblock styles %}
-
-
+{% block styles %}
+				<link rel="stylesheet" href="styles/login.css">
+{% endblock styles %}
 
 {% block content %}
-    
-    <div class="page-login"></div>
-		<div class="content">
-			<header>
-				<a href="/record"><span></span> Cadastra-se</a>
-			</header>
-		<div class="title">
-			<div>Pet<span>Home</span></div>
-		</div>
-		<br>
-		<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
-				<input type="password" placeholder="password" name="password"><br>
-				<input type="button" value="Login">
-		</div>
-	</div>
+
+				<div class="page-login"></div>
+				<div class="content">
+								<header>
+												<a href="/record">
+																<span></span>
+																Cadastra-se</a>
+								</header>
+								<div class="title">
+												<div>Pet<span>Home</span></div>
+								</div>
+								<br>
+								<div class="login">
+												<input type="text" placeholder="username" name="user"><br>
+												<input type="password" placeholder="password" name="password"><br>
+												<input type="button" value="Login">
+								</div>
+				</div>
 {% endblock content %}
