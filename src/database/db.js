@@ -8,5 +8,11 @@ const db = new sqlite3.Database("./src/database/database.db")
 // utilizar o obejto de dados para nossas operações 
 
 db.serialize(() => {
+    // Criar tabelas 
+    db.run(`
+        CREATE TABLE IF NOT EXISTS places (
+            id INTERGER KEY AUTOINCREMENT,
+        );
+    `)
     
 })
