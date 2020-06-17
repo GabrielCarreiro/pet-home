@@ -11,7 +11,7 @@ db.serialize(() => {
     // Criar tabelas 
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
-            id INTERGER KEY AUTOINCREMENT,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,
             address TEXT,
             state TEXT,
@@ -26,7 +26,7 @@ db.serialize(() => {
         );
 
         CREATE TABLE IF NOT EXISTS client (
-            id INTERGER KEY AUTOINCREMENT,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,
             user TEXT,
             email TEXT,
@@ -36,5 +36,40 @@ db.serialize(() => {
     `)
 
     // Inserindo dados na tabelas
+    const query = `
+        INSERT INTO places (
+            name,
+            address,
+            state,
+            city,
+            phone,
+            whatsapp,
+            image,
+            time,
+            description,
+            items
+        ) values (?,?,?,?,?,?,?,?,?,?);
+        `
+        const values = [
+            "PetMonitor",
+            "Rua Jose Maria",
+            "Bahia",
+            "Salvador",
+            "xxxx-xxxx",
+            "(xx)xxxxx-xxxx",
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fclinicaempreendedora.com.br%2Fcomo-escolher-o-ponto-certo-para-o-pet-shop%2F&psig=AOvVaw0HdZ0HRF6qf1uGFlP8h2pk&ust=1592442976748000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDzuMTWh-oCFQAAAAAdAAAAABAD",
+            "08:00 ás 16:00",
+            "Lindo lugar",
+            "Petshop"
+        ]
+
+        function afterInsertData(err) {
+            if(err) {
+                return console.log(err)
+            }
+            console.log("Cadastrado com sucesso")
+            console.log(this)
+        }
+    db.run(query, values, afterInsertData)
 
 })
