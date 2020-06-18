@@ -11,46 +11,27 @@
 
         <main>
             <div class="cards">
-                <div class="card">
-                    <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/fachada-pet.png" alt="petshop">
-                    <h1>
-                        PetMania</h1>
-                    <h3>Petshop</h3>
-                    <p>
-                        Rua: José carmela dutra, Nº 156
+
+            {% for place in places %}
+            <div class="card">
+                    <img src="{{place.image}}" alt="{{place.name}}">
+                    <h1>{{place.name}}</h1>
+                    <h3>{{place.items}}</h3>
+                    <p>{{place.address}}
                         <br/>
-                        Centro, Teresópolis, Rio de Janeiro
-                        <br/>
-                    </p>
-                    <h4>
-                        Telefone: (21) xxxx-xxxx
-                        <br/>
-                        Whatsapp: (21)9xxxx-xxxx
-                        <br/>
-                        Horario de funcionamento: 08:00 às 19:00
-                    </h4>
-                </div>
-                <div class="card">
-                    <img src="https://www.suafranquia.com/views/sources/images/conteudo/conteudo/16585633408b40f0a19d19cc64bc938f.jpg" alt="petshop">
-                    <h1>
-                        Alvorada Pet
-                    </h1>
-                    <h3>Petshop, Adoção
-                    </h3>
-                    <p>
-                        Rua: Lucio Meira, Nº 147
-                        <br/>
-                        Centro, Teresópolis, Rio de Janeiro
+                        {{place.city}}, {{place.state}}
                         <br/>
                     </p>
                     <h4>
-                        Telefone: (21) xxxx-xxxx
+                        {{place.phone}}
                         <br/>
-                        Whatsapp: (21)9xxxx-xxxx
+                        {{place.whatsapp}}
                         <br/>
-                        Horario de funcionamento: 08:00 às 17:00
+                        {{place.time}}
                     </h4>
                 </div>
+
+            {% endfor %}      
             </div>
         </main>
     </div>

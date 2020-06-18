@@ -5,6 +5,9 @@ const express = require("express")
 // Variável que chama a função express
 const server = express()
 
+//Importando o banco de dados\
+const db = require("./database/db")
+
 // Configurar Pasta Publica
 server.use(express.static("public"))
 
@@ -46,7 +49,17 @@ server.get("/search", (req, res) => {
 // Configurando o caminho do page-results
 
 server.get("/page-results", (req, res) => {
-    return res.render("page-results.html")
+
+    //pegar os dados do banco de dados
+
+        db.all(` SELECT * FROM places`, function(err, rows) {
+        if(err) {
+            return console.log(err)
+        }
+
+        return res.render("page-results.html", { places: rows})
+    })
+    
 
 })
 
