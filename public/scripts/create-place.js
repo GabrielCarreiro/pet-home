@@ -39,47 +39,51 @@ document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
 
-    const itemsToCollect = document.querySelectorAll(".place-grid li")
 
-    for(const item of itemsToCollect){
-        item.addEventListener("click", handleSelecteditem)
-    }
+
+const placesToGo = document.querySelectorAll(".place-grid li")
+
+for(const places of placesToGo){
+    places.addEventListener("click", handleSelecteditem)
+}
+
+const placesSelect = document.querySelector("input[name=places]")
+
+let selectedPlaces = []
+
+function handleSelecteditem(event){
+
+    const placesLi = event.target
+
+
+    placesLi.classList.toggle("selected")
+
+    const placesId = event.target.dataset.id
     
-    const colleteditems = document.querySelector("input[name=items]")
+
+    const alreadySelected = selectedPlaces.findIndex( places =>{
+        const placesFound = places == placesId
+        return placesFound
+    })
+
+    if(alreadySelected >=0 ){
     
-    let selectedItems = []
-    
-    function handleSelecteditem(event){
-    
-        const itemLi = event.target
-    
-    
-        itemLi.classList.toggle("selected")
-    
-        const itemId = event.target.dataset.id
-     
-    
-        const alreadySelected = selectedItems.findIndex( item =>{
-            const itemFound = item == itemId
-            return itemFound
+        const filteredplaces = selectedPlaces.filter(places => {
+            const placesIsDifferent = places != placesId
+            return placesIsDifferent
         })
-    
-        if(alreadySelected >=0 ){
+
+        selectedPlaces = filteredplaces
+
+    }else{
+
         
-            const filteredItems = selectedItems.filter(item => {
-                const itemIsDifferent = item != itemId
-                return itemIsDifferent
-            })
-    
-            selectedItems = filteredItems
-    
-        }else{
-    
-            
-            selectedItems.push(itemId)
-    
-        }
-         
-        colleteditems.value = selectedItems
-        
+        selectedPlaces.push(placesId)
+
     }
+        
+    placesSelect.value = selectedPlaces
+    
+}
+
+
