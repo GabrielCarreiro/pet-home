@@ -10,8 +10,10 @@
         {%include "partials/page-header.html" %}
 
         <main>
-            <div class="cards">
 
+            {% if total > 0 %}
+
+            <div class="cards">
             {% for place in places %}
             <div class="card">
                     <img src="{{place.image}}" alt="{{place.name}}">
@@ -31,9 +33,16 @@
                         Horário de Funcionamento: {{place.time}}
                     </h4>
                 </div>
-
             {% endfor %}      
             </div>
+
+            {%else%}
+
+            <h2> Nenhum local encontrado !</h2>
+
+            {% endif %}
+
+            
         </main>
     </div>
 {% endblock content %}

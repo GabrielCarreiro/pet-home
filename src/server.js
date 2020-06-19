@@ -57,7 +57,9 @@ server.get("/page-results", (req, res) => {
             return console.log(err)
         }
 
-        return res.render("page-results.html", { places: rows})
+        const total = rows.length
+
+        return res.render("page-results.html", { places: rows, total: total})
     })
     
 
