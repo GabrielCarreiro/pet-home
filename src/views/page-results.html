@@ -13,36 +13,43 @@
 
             {% if total > 0 %}
 
-            <div class="cards">
-            {% for place in places %}
-            <div class="card">
-                    <img src="{{place.image}}" alt="{{place.name}}">
-                    <h1>{{place.name}}</h1>
-                    <h3>{{place.items}}</h3>
-                    <p>{{place.address}}
-                        <br/>
-                        {{place.city}}, {{place.state}}
-                        <br/>
-                    </p>
-                    <p><strong> Descrição:</strong> {{place.description}}</p>
-                    <h4>
-                        Telefone: {{place.phone}}
-                        <br/>
-                        Whatsapp: {{place.whatsapp}}
-                        <br/>
-                        Horário de Funcionamento: {{place.time}}
-                    </h4>
+                <div class="cards">
+                    {% for place in places %}
+                        <div class="card">
+                            <img src="{{place.image}}" alt="{{place.name}}">
+                            <h1>{{place.name}}</h1>
+                            <h3>{{place.items}}</h3>
+                            <p>{{place.address}}
+                                <br/>
+                                {{place.city}},
+                                {{place.state}}
+                                <br/>
+                            </p>
+                            <p>
+                                <strong>
+                                    Descrição:</strong>
+                                {{place.description}}</p>
+                            <h4>
+                                Telefone:
+                                {{place.phone}}
+                                <br/>
+                                Whatsapp:
+                                {{place.whatsapp}}
+                                <br/>
+                                Horário de Funcionamento:
+                                {{place.time}}
+                            </h4>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}      
-            </div>
 
-            {%else%}
+                {%else%}
 
-            <h2> Nenhum local encontrado !</h2>
+                <h2>
+                    Nenhum local encontrado !</h2>
 
             {% endif %}
 
-            
         </main>
     </div>
 {% endblock content %}
