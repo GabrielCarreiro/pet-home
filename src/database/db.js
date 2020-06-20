@@ -16,6 +16,8 @@ module.exports = db
 //             id INTEGER PRIMARY KEY AUTOINCREMENT,
 //             name TEXT,
 //             address TEXT,
+//             address2 TEXT,
+//             number TEXT,
 //             state TEXT,
 //             city TEXT,
 //             phone TEXT,
@@ -23,7 +25,7 @@ module.exports = db
 //             image TEXT,
 //             time TEXT,
 //             description TEXT,
-//             items TEXT
+//             places TEXT
 
 //         );
 
@@ -86,4 +88,4 @@ module.exports = db
 
 //     })
 
-// })
+//})

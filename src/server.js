@@ -11,6 +11,9 @@ const db = require("./database/db")
 // Configurar Pasta Publica
 server.use(express.static("public"))
 
+// Habilitar o uso do req.bory da nossa aplicação
+server.use(express.urlencoded({ extended: true }))
+
 // Configurando o templete engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views",{
@@ -35,13 +38,63 @@ server.get("/record", (req, res) => {
 // Configurando o caminho do create-place
 
 server.get("/create-place", (req, res) => {
+
     return res.render("create-place.html")
+
+})
+
+server.post("/savepoint", (req, res) => {
+
+        const query = `
+        INSERT INTO places (
+            name,
+            address,
+            address2,
+            number,
+            state,
+            city,
+            phone,
+            whatsapp,
+            image,
+            time,
+            description,
+            places
+        ) values (?,?,?,?,?,?,?,?,?,?,?,?);
+        `
+        const values = [
+            req.body.name,
+            req.body.address,
+            req.body.address2,
+            req.body.number,
+            req.body.state,
+            req.body.city,
+            req.body.phone,
+            req.body.whatsapp,
+            req.body.image,
+            req.body.time,
+            req.body.description,
+            req.body.places
+        
+        ]
+
+        function afterInsertData(err) {
+            if(err) {
+                return console.log(err)
+            }
+            console.log("Cadastrado com sucesso")
+            console.log(this)
+
+            return res.send("search.html")
+        }
+    db.run(query, values, afterInsertData)
+
 
 })
 
 // Configurando o caminho do search
 
 server.get("/search", (req, res) => {
+
     return res.render("search.html")
 
 })
@@ -50,9 +103,17 @@ server.get("/search", (req, res) => {
 
 server.get("/page-results", (req, res) => {
 
+    const search = req.query.search
+
+    if(search == "" ){
+        
+        return res.render("page-results.html", {total: 0})
+
+    }
+
     //pegar os dados do banco de dados
 
-        db.all(` SELECT * FROM places`, function(err, rows) {
+        db.all(` SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
         if(err) {
             return console.log(err)
         }

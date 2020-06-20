@@ -12,7 +12,7 @@
     <div class="create-place">
         <div class="content">
             {%include "partials/page-header.html" %}
-            <form action="">
+            <form action="/savepoint" method="POST">
                 <fieldset>
                     <legend>
                         <h2>
@@ -32,6 +32,20 @@
                                 Endereço da entidade
                             </label>
                             <input type="text" name="address">
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="address2">
+                                Bairro
+                            </label>
+                            <input type="text" name="address2">
+                        </div>
+                        <div class="field">
+                            <label for="number">
+                                Número
+                            </label>
+                            <input type="text" name="number">
                         </div>
                     </div>
                     <div class="field-group">
