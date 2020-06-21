@@ -23,7 +23,8 @@ module.exports = db
 //             phone TEXT,
 //             whatsapp TEXT,
 //             image TEXT,
-//             time TEXT,
+//             open TEXT,
+//             close TEXT,
 //             description TEXT,
 //             places TEXT
 
@@ -88,4 +89,4 @@ module.exports = db
 
 //     })
 
-//})
+// })

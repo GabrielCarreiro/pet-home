@@ -65,7 +65,7 @@ form .field{
 form input, form select{
     background-color: var(--white-color);
     border: 0;
-    font-size: 16px;
+    font-size: 18px;
     padding: 16px 24px;
     border-radius: 10px;
     outline: none;
@@ -78,9 +78,8 @@ form select{
 }
 
 form input[type="time"]{
-    display: inline;
-    
-    
+    font-size: 18px;
+    padding: 12px 100px;
     
 }
 
@@ -91,8 +90,9 @@ form .field-group .field + .field{
 form textarea{
     background-color:var(--white-color);
     border: 0;
+    padding: 0 24px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
     outline: none;
 }
 

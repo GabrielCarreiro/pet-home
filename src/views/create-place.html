@@ -23,7 +23,7 @@
                             <label for="name">
                                 Nome da entidade
                             </label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" placeholder="Nome do Petshop ou da Instituição">
                         </div>
                     </div>
                     <div class="field-group">
@@ -31,7 +31,13 @@
                             <label for="address">
                                 Endereço da entidade
                             </label>
-                            <input type="text" name="address">
+                            <input type="text" name="address" placeholder="ex: Luciano da Silveira">
+                        </div>
+                        <div class="field">
+                            <label for="number">
+                                Número/Completando 
+                            </label>
+                            <input type="text" name="number"  placeholder="ex: 230 ou 2ºandar">
                         </div>
                     </div>
                     <div class="field-group">
@@ -39,16 +45,8 @@
                             <label for="address2">
                                 Bairro
                             </label>
-                            <input type="text" name="address2">
+                            <input type="text" name="address2" placeholder="ex: Centro">
                         </div>
-                        <div class="field">
-                            <label for="number">
-                                Número
-                            </label>
-                            <input type="text" name="number">
-                        </div>
-                    </div>
-                    <div class="field-group">
                         <div class="field">
                             <label for="state">Estado</label>
                             <select name="uf">
@@ -58,40 +56,47 @@
                             </select>
                             <input type="hidden" name="state">
                         </div>
+                    </div>
+                    <div class="field-group">                        
                         <div class="field">
                             <label for="city">Cidade</label>
                             <select name="city">
                                 <option value="">Selecione a cidade</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="field-group">
                         <div class="field">
                             <label for="phone">
                                 Telefone
                             </label>
-                            <input type="text" name="phone">
-                        </div>
-                        <div class="field">
-                            <label for="whatsapp">
-                                Whatsapp
-                            </label>
-                            <input type="text" name="whatsapp">
+                            <input type="text" name="phone" placeholder="ex: (xx) xxxx-xxxx">
                         </div>
                     </div>
                     <div class="field-group">
                         <div class="field">
+                            <label for="whatsapp">
+                                Whatsapp
+                            </label>
+                            <input type="text" name="whatsapp" placeholder="ex: (xx) xxxxx-xxxx">
+                        </div>
+                        <div class="field">
                             <label for="image">
                                 Imagem
                             </label>
-                            <input type="text" name="image">
-                        </div>
+                            <input type="url" name="image" placeholder="http://">
+                        </div>                      
+                    </div>
+                    <div class="field-group">
                         <div class="field">
-                            <label for="time">
+                            <label for="open">
                                 Horário de funcionamento
                             </label>
-                            <input type="text" name="time" value="  ás  ">
-                            
+                            <input type="time" name="open" >                           
+                        </div>
+                        <div class="field">
+                            <label for="close">
+                           <strong> Até: </strong>
+                            </label>
+                            <input type="time" name="close">                           
                         </div>
                     </div>
                     <div class="field-group">
@@ -99,7 +104,7 @@
                             <label for="description">
                                 Descrição
                             </label>
-                            <textarea name="description" cols="30" rows="5"></textarea>
+                            <textarea name="description"  placeholder="Uma descrição do local ou um anúncio !" cols="30" rows="4"></textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -108,13 +113,13 @@
                         <h2>Selecione o tipo de entidade</h2>
                     </legend>
                     <div class="place-grid">
-                        <li data-id="petshop">
+                        <li data-id="Petshop">
                             <img src="/assets/petshop.svg" alt="Petshop">
                             <span>
                                 Petshop
                             </span>
                         </li>
-                        <li data-id="donate">
+                        <li data-id="Adoção">
                             <img src="/assets/adocao.svg" alt="adoção">
                             <span>
                                 Adoção

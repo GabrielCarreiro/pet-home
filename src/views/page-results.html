@@ -18,27 +18,22 @@
                         <div class="card">
                             <img src="{{place.image}}" alt="{{place.name}}">
                             <h1>{{place.name}}</h1>
-                            <h3>{{place.items}}</h3>
-                            <p>{{place.address}}
-                                <br/>
+                            <h2> {{place.places}}</h2><br/>
+                            <p> <strong> Rua:</strong> {{place.address}},
+                             {{place.address2}},
+                              <strong>Nº</strong> {{place.number}}<br/></p>
                                 {{place.city}},
-                                {{place.state}}
-                                <br/>
-                            </p>
-                            <p>
-                                <strong>
-                                    Descrição:</strong>
-                                {{place.description}}</p>
+                                {{place.state}}.<br/>
                             <h4>
                                 Telefone:
-                                {{place.phone}}
+                                {{place.phone}}.
                                 <br/>
                                 Whatsapp:
-                                {{place.whatsapp}}
-                                <br/>
-                                Horário de Funcionamento:
-                                {{place.time}}
-                            </h4>
+                                {{place.whatsapp}}.
+                                <br/> </h4>
+                               <strong> Aberto das: </strong> {{place.open}}  <strong> até  </strong> {{place.close}}.
+                               <p><strong> Descrição:</strong>
+                                {{place.description}}.</p>
                         </div>
                     {% endfor %}
                 </div>
