@@ -28,11 +28,70 @@ server.get("/", (req, res) => {
 
 })
 
+server.post("/?", (req, res) => {
+    
+    // Atribui na const user, o usuario que foi digitado no login
+    const user = req.body.user
+    // Atribui na const password, a senha digitada no login
+    const password = req.body.password
+    
+    // Se os campos não tiver valor, retorna para o index
+    if(user == "" || password == ""){
+
+        return res.render("index.html")
+    }
+    
+    // Se não, faz um pesquisa no banco e consulta pelos dados
+    db.all(`SELECT user FROM client WHERE user = '${user}' and password = '${password}'`, function(err, rows){
+        if(err) {
+            return console.log(err)
+        }
+        // Atribui na variavel results o rows com valor 1 ou 0
+        const results = rows.length
+
+        // Compara os valores, se verdadeiro faz o login
+        if(results == 1){
+            return res.render("search.html")
+        }
+        // Se não, vai para pagina de cadastro
+            return res.render("record.html")
+    })
+})
+
 // Configurando o caminho do record
 
 server.get("/record", (req, res) => {
     return res.render("record.html")
 
+})
+
+server.post("/saveuser", (req, res) =>{
+    const query = `
+        INSERT INTO client (
+            name,
+            user,
+            email,
+            password
+        ) values (?,?,?,?);
+        `
+        const values = [
+            req.body.name,
+            req.body.user,
+            req.body.email,
+            req.body.password
+
+        ]
+
+        function afterInsertData(err) {
+            if(err) {
+                return console.log(err)
+            }
+            console.log("Cadastrado com sucesso")
+            console.log(this)
+
+            return res.render("index.html")
+        }
+    db.run(query, values, afterInsertData)
 })
 
 // Configurando o caminho do create-place
@@ -86,7 +145,7 @@ server.post("/savepoint", (req, res) => {
             console.log("Cadastrado com sucesso")
             console.log(this)
 
-            return res.send("search.html")
+            return res.render("search.html")
         }
     db.run(query, values, afterInsertData)
 
@@ -107,6 +166,7 @@ server.get("/page-results", (req, res) => {
 
     const search = req.query.search
 
+
     if(search == "" ){
         
         return res.render("page-results.html", {total: 0})
@@ -121,6 +181,7 @@ server.get("/page-results", (req, res) => {
         }
 
         const total = rows.length
+
 
         return res.render("page-results.html", { places: rows, total: total})
     })
