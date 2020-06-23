@@ -10,7 +10,7 @@ module.exports = db
 // utilizar o obejto de dados para nossas operações 
 
 // db.serialize(() => {
-//     Criar tabelas 
+//    // Criar tabelas 
 //     db.run(`
 //         CREATE TABLE IF NOT EXISTS places (
 //             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -35,7 +35,8 @@ module.exports = db
 //             name TEXT,
 //             user TEXT,
 //             email TEXT,
-//             password TEXT
+//             password BLOB,
+//             confirm_password BLOB
 //         );
 
 //     `)

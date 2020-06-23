@@ -66,19 +66,28 @@ server.get("/record", (req, res) => {
 })
 
 server.post("/saveuser", (req, res) =>{
-    const query = `
+
+    const senha = req.body.password
+    const Csenha = req.body.confirm_password
+    if(senha != Csenha){
+        
+    return res.render("record.html")
+     
+    } const query = `
         INSERT INTO client (
             name,
             user,
             email,
-            password
-        ) values (?,?,?,?);
+            password,
+            confirm_password
+        ) values (?,?,?,?,?);
         `
         const values = [
             req.body.name,
             req.body.user,
             req.body.email,
-            req.body.password
+            req.body.password,
+            req.body.confirm_password
 
         ]
 

@@ -27,7 +27,7 @@
                         <label for="name">
                             Digite seu nome
                         </label>
-                        <input type="text" name="name">
+                        <input type="text" name="name"  placeholder="Digite seu nome completo" minlength="4" required>
                     </div>
                 </div>
                 <div class="field-group">
@@ -35,7 +35,7 @@
                         <label for="user">
                             Usuario
                         </label>
-                        <input type="text" name="user">
+                        <input type="text" name="user"  placeholder="O usuário deve ter no minimo 5 carácter" maxlength="15" minlength="5" required>
                     </div>
                 </div>
                 <div class="field-group">
@@ -43,7 +43,7 @@
                         <label for="email">
                             Email
                         </label>
-                        <input type="text" name="email">
+                        <input type="text" name="email" placeholder="Digite seu email" minlength="8" required>
                     </div>
                 </div>
                 <div class="field-group">
@@ -51,7 +51,15 @@
                         <label for="password">
                             Digite sua senha
                         </label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" placeholder="Sua senha deve ter no minimo 8 carácter" maxlength="12" minlength="8" required>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="confirm_password">
+                            Digite sua senha novamente
+                        </label>
+                        <input type="password" name="confirm_password" placeholder="Digite sua senha novamente" maxlength="12" minlength="8" required>
                     </div>
                 </div>
                 <button type="submit">
