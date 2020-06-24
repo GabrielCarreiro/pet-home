@@ -4,6 +4,8 @@
     <title>Cadastra-se</title>
 {% endblock title %}
 
+
+
 {% block styles %}
     <link rel="stylesheet" href="/styles/record.css">
 {% endblock styles %}
@@ -35,15 +37,8 @@
                         <label for="user">
                             Usuario
                         </label>
-                        <input type="text" name="user"  placeholder="O usuário deve ter no minimo 5 carácter" maxlength="15" minlength="5" required>
-                    </div>
-                </div>
-                <div class="field-group">
-                    <div class="field">
-                        <label for="email">
-                            Email
-                        </label>
-                        <input type="text" name="email" placeholder="Digite seu email" minlength="8" required>
+                        <input type="text" name="user"  placeholder="O usuário deve ter no minimo 5 carácter" 
+                                maxlength="15" minlength="5" required>
                     </div>
                 </div>
                 <div class="field-group">
@@ -51,7 +46,8 @@
                         <label for="password">
                             Digite sua senha
                         </label>
-                        <input type="password" name="password" placeholder="Sua senha deve ter no minimo 8 carácter" maxlength="12" minlength="8" required>
+                        <input type="password" id="password" name="password" placeholder="Sua senha deve ter no minimo 8 carácter"
+                                     maxlength="12" minlength="8" required onKeyUp="validandoSenha()">
                     </div>
                 </div>
                 <div class="field-group">
@@ -59,13 +55,22 @@
                         <label for="confirm_password">
                             Digite sua senha novamente
                         </label>
-                        <input type="password" name="confirm_password" placeholder="Digite sua senha novamente" maxlength="12" minlength="8" required>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Digite sua senha novamente" 
+                                        maxlength="12" minlength="8" required disabled>
                     </div>
                 </div>
-                <button type="submit">
-                    Cadastrar Usuário
-                </button>
+                 <div class="field-group">
+                    <div class="field">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input type="text" name="email" placeholder="Digite seu email" minlength="8" onKeyUp="Verifica()">
+                    </div>
+                </div>
+                <button type="submit" id="envia" disabled> Cadastrar </button>
+                      
             </form>
         </div>
     </div>
+   <script src="/scripts/record.js"></script>
 {% endblock content %}

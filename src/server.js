@@ -67,9 +67,9 @@ server.get("/record", (req, res) => {
 
 server.post("/saveuser", (req, res) =>{
 
-    const senha = req.body.password
-    const Csenha = req.body.confirm_password
-    if(senha != Csenha){
+    const password = req.body.password
+    const confirm_password = req.body.confirm_password
+    if(password != confirm_password){
         
     return res.render("record.html")
      
@@ -113,6 +113,21 @@ server.get("/create-place", (req, res) => {
 
 server.post("/savepoint", (req, res) => {
 
+    const name = req.body.name
+
+    console.log(name)
+
+   db.all(`SELECT name FROM places WHERE name = '${name}'`, function(err, rows){
+       if(err){
+           console.log(err)
+       }
+        const results = rows.length
+
+        console.log(results)
+
+        if(results >= 1){
+            return res.render("create-place.html")
+        }
         const query = `
         INSERT INTO places (
             name,
@@ -159,7 +174,11 @@ server.post("/savepoint", (req, res) => {
     db.run(query, values, afterInsertData)
 
 
+    })
+
 })
+
+   
 
 // Configurando o caminho do search
 
