@@ -115,8 +115,6 @@ server.post("/savepoint", (req, res) => {
 
     const name = req.body.name
 
-    console.log(name)
-
    db.all(`SELECT name FROM places WHERE name = '${name}'`, function(err, rows){
        if(err){
            console.log(err)
