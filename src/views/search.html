@@ -18,12 +18,21 @@
             <form action="/page-results">
                 <label for="search">Cidade</label>
                 <div class="search-field">
-                    <input type="text" name="search" placeholder="Digite a cidade">
+                    <input type="text" name="search" placeholder="Digite a cidade" style="display:none" id="search">
                     <button>
-                        <img src="/assets/search.svg" alt="Buscar">
+                        <img src="/assets/search.svg" alt="Buscar" >
                     </button>
                 </div>
             </form>
         </div>
     </div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $('#search').hide();
+
+setTimeout(function(){ 
+    $('#search').show();
+}, 1000);
+</script>
 {% endblock content %}

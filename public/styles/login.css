@@ -10,17 +10,13 @@ body{
 }
 
 .page-login{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-    bottom: -40px;
-    width: auto;
-	height: auto;
-    background-image: url(../assets/background.png);
-	background-size: cover;
-	-webkit-filter: blur(5px);
-	z-index: 0;
+	position: fixed;
+    width: 100vw;
+	height: 100vh;
+	background-image: url(../assets/background.svg);
+	background-size: 85%;
+	background-position: center center;
+	 
 }
 
 .content{
@@ -33,7 +29,7 @@ body{
 	height: auto;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
 	z-index: 1;
-	opacity: 0.7;
+	opacity: 0.8;
 }
 
 .content header{
@@ -61,8 +57,8 @@ body{
 
 .title{
 	position: absolute;
-	top: calc(50% - 130px);
-	left: calc(50% - 55px);
+	top: calc(50% - 135px);
+	left: calc(50% - 70px);
 	z-index: 2;
 }
 
@@ -70,8 +66,9 @@ body{
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 35px;
+	font-size: 40px;
 	font-weight: 200;
+	
 }
 
 .title div span{
@@ -96,7 +93,7 @@ body{
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 400;
 	padding: 4px;
 }
@@ -109,7 +106,7 @@ body{
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 400;
 	padding: 4px;
 	margin-top: 10px;
