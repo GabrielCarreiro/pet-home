@@ -67,41 +67,64 @@ server.get("/record", (req, res) => {
 
 server.post("/saveuser", (req, res) =>{
 
+    const user = req.body.user
     const password = req.body.password
     const confirm_password = req.body.confirm_password
-    if(password != confirm_password){
+
+    db.all(`SELECT user FROM client WHERE user = '${user}'`, function(err, rows){
+
+        if(err){
+            console.log(err)
+        } 
+            const results_user = rows.length
+
+
+        if(results_user >= 1){
+            
+            return res.render("record.html", {results: 1})
+            
+            
+
+        }else  if(password != confirm_password){
+                
+            return res.render("record.html")
+            
+            } else {
+                const query = `
+                INSERT INTO client (
+                    name,
+                    user,
+                    email,
+                    password,
+                    confirm_password
+                ) values (?,?,?,?,?);
+                `
+                const values = [
+                    req.body.name,
+                    req.body.user,
+                    req.body.email,
+                    req.body.password,
+                    req.body.confirm_password
         
-    return res.render("record.html")
-     
-    } const query = `
-        INSERT INTO client (
-            name,
-            user,
-            email,
-            password,
-            confirm_password
-        ) values (?,?,?,?,?);
-        `
-        const values = [
-            req.body.name,
-            req.body.user,
-            req.body.email,
-            req.body.password,
-            req.body.confirm_password
-
-        ]
-
-        function afterInsertData(err) {
-            if(err) {
-                return console.log(err)
+                ]
+        
+                function afterInsertData(err) {
+                    if(err) {
+                        return console.log(err)
+                    }
+                    console.log("Cadastrado com sucesso")
+                    console.log(this)
+        
+                    return res.render("index.html")
+                }
+            db.run(query, values, afterInsertData)
             }
-            console.log("Cadastrado com sucesso")
-            console.log(this)
+            
+        })
 
-            return res.render("index.html")
-        }
-    db.run(query, values, afterInsertData)
-})
+    })
+
+    
 
 // Configurando o caminho do create-place
 
@@ -110,7 +133,7 @@ server.get("/create-place", (req, res) => {
     return res.render("create-place.html")
 
 })
-
+                                                                                                                                                                                                           
 server.post("/savepoint", (req, res) => {
 
     const name = req.body.name
@@ -121,7 +144,7 @@ server.post("/savepoint", (req, res) => {
        }
         const results = rows.length
 
-        console.log(results)
+        console.log(results)  
 
         if(results >= 1){
             return res.render("create-place.html")

@@ -12,7 +12,15 @@
 
 {% block content %}
     <div id="page-record">
-        <div class="content">
+
+        {% if results > 0 %}
+
+            <div class="alert">
+                <h2> Usuario já cadastrado</h2>
+            </div>
+        
+        {% else %}
+            <div class="content">
             <header>
                 <a href="/">
                     <span></span>
@@ -71,6 +79,9 @@
                       
             </form>
         </div>
+
+        {% endif %}
+        
     </div>
    <script src="/scripts/record.js"></script>
 {% endblock content %}

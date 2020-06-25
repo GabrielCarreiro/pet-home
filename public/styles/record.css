@@ -85,3 +85,11 @@ form button:hover{
  background-color: #d38d7c;
 
 }
+
+.alert {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+
+}

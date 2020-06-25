@@ -26,3 +26,4 @@ if(!regex.exec(password))
 }
 
 }
+
