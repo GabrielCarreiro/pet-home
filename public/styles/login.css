@@ -10,12 +10,14 @@ body{
 }
 
 .page-login{
-	position: fixed;
+	position: absolute;
     width: 100vw;
 	height: 100vh;
 	background-image: url(../assets/background.svg);
+	background-repeat: no-repeat;
 	background-size: 85%;
 	background-position: center center;
+	
 	 
 }
 
@@ -29,29 +31,31 @@ body{
 	height: auto;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
 	z-index: 1;
-	opacity: 0.8;
+	opacity: 0.7;
+	
 }
 
 .content header{
-    margin-left: 1225px;
-    margin-top: 30px;
+    margin-top: 48px;
     display: flex;
-    justify-content: space-between;
-	align-items: center;
+    align-items: center;
+	justify-content: space-between;
+	
 	
 }
 
 .content header a{
-    font-size: 18px;
+	position: absolute;
+	margin-left: 1225px;
+	font-size: 18px;
 }
 .content header span{
+	position: absolute;
     background-image: url(../assets/enter.svg);
-    display: flex;
-    position: absolute;
     width: 32px;
     height: 32px;
-    right: 208px;
-    top: 22px;
+    right: 105px;
+    bottom: -1px;
 }
 
 

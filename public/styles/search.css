@@ -5,25 +5,37 @@
 	background-image: url(../assets/background_search.svg);
 	background-size: 60%;
     background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #page-search header{
-    margin-left: 1250px;
-    margin-top: 30px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
 }
 
 #page-search header a{
-    font-size: 20px;
+	position: fixed;
+	margin-left: 1225px;
+	font-size: 18px;
+}
+
+#page-search header h6 a{
+    position: absolute;
+    margin-left: 1315px;
+    font-weight: 400;
+    top: 36px;
+	
 }
 
 #page-search header span{
-	
-	background-image: url(../assets/enter.svg);
-	width: 30px;
-	height: 30px;
 	position: absolute;
-	right: 120px;
-    top: 25px;
+    background-image: url(../assets/enter.svg);
+    width: 32px;
+    height: 32px;
+    right: 90px;
+    bottom: -1px;
 }
 
 .content form{

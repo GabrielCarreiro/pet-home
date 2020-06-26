@@ -1,26 +1,28 @@
 .create-place{
     width: 90%;
-    max-width: 1100px;
-
+    
     margin: 0 auto;
 }
 
 .create-place header{
-    margin-left: 1100px;
-    margin-top: 30px;
+    margin-top: 48px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+	justify-content: space-between;
+}
+.create-place header a{
+	position: absolute;
+	margin-left: 1200px;
+	font-size: 18px;
 }
 
 .create-place header span{
+	position: absolute;
     background-image: url(../assets/enter.svg);
-    display: flex;
-    position: absolute;
     width: 32px;
     height: 32px;
-    right: 130px;
-    top: 23px;
+    right: 55px;
+    bottom: -1px;
 }
 
 form{
