@@ -1,0 +1,15 @@
+@media (max-width: 400px){
+
+
+    .page-login {
+        background-position: fixed;
+        background-color: #eed3cc;
+        overflow: hidden;    
+        
+    }
+    .content{    
+       width: 390px;
+    }
+
+    
+}
