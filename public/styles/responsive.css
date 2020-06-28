@@ -11,5 +11,71 @@
        width: 390px;
     }
 
+    #page-record .content{
+        overflow: hidden;  
+    }
     
+    #page-record form{
+        
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        margin-left: 12px;
+    }
+
+    #page-record form input{
+        font-size: 13px;
+    }
+
+    #page-record form button{
+        margin-left: 90px;
+    }
+    
+    #page-search{ 
+        background-position-y: 350px;
+    }
+
+    #page-search header a{
+        font-size: 14px;
+        margin-left: 260px;
+        top: 36px;
+    }
+
+    #page-search header h6 a{
+        
+        margin-left: 335px;
+    }
+
+    #page-search header span{
+        background-size: 30px;
+        right: 75px;
+        bottom: -5px;
+    }
+
+    #page-search .content form{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 200px;
+    }
+    #page-search .content form input{
+        width: 350px;
+    }
+
+    #create-place .field-group{
+        flex-direction: column;
+    }
+
+    #create-place .field-group .field + .field{
+        margin-left: 0;
+    }
+
+    #create-place form{
+        width: 85%;
+        padding: 7px;
+        margin: 0;
+    }
+
+    #create-place form input, select, textarea{
+        width: 100%;
+    }
 }

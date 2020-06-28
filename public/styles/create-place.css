@@ -1,22 +1,22 @@
-.create-place{
+#create-place{
     width: 90%;
     
     margin: 0 auto;
 }
 
-.create-place header{
+#create-place header{
     margin-top: 48px;
     display: flex;
     align-items: center;
 	justify-content: space-between;
 }
-.create-place header a{
+#create-place header a{
 	position: absolute;
 	margin-left: 1200px;
 	font-size: 18px;
 }
 
-.create-place header span{
+#create-place header span{
 	position: absolute;
     background-image: url(../assets/enter.svg);
     width: 32px;
