@@ -81,5 +81,14 @@
 
     #create-place form input, select, textarea{
         width: 100%;
+        font-size: 16px;
+    }
+
+    #create-place form button{
+        margin-left: 60px;
+    }
+
+    #create-place .place-grid li img{
+        
     }
 }
