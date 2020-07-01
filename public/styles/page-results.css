@@ -22,23 +22,27 @@ h2 {
 #page-results header{
     margin-top: 48px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-	justify-content: space-between;
 }
 
 #page-results header a{
-	position: absolute;
-	margin-left: 1150px;
-	font-size: 18px;
+	
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+
 }
 
 #page-results header span{
-	position: absolute;
+
+	margin-right: 5px;
     background-image: url(../assets/enter.svg);
+    display: flex;
     width: 32px;
     height: 32px;
-    right: 55px;
-    bottom: -1px;
+    
+    
 }
 
 main{

@@ -12,15 +12,15 @@
     }
 
     #page-record .content{
-        overflow: hidden;  
+        overflow: hidden;
     }
     
     #page-record form{
         
         width: 80%;
-        margin: 0 auto;
         padding: 10px;
-        margin-left: 12px;
+        margin-left: 3px;
+        flex: 1;
     }
 
     #page-record form input{
@@ -74,9 +74,10 @@
     }
 
     #create-place form{
-        width: 85%;
+        width: 97%;
         padding: 7px;
         margin: 0;
+        flex: 1;
     }
 
     #create-place form input, select, textarea{
@@ -88,9 +89,6 @@
         margin-left: 60px;
     }
 
-    #create-place .place-grid li img{
-        
-    }
 }
 
 @media (max-width: 900px){

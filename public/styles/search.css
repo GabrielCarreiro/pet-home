@@ -1,54 +1,60 @@
 #page-search{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.search{
     position: fixed;
-    width: 100vw;
-	height: 100vh;
+    width: 85vw;
+	height: 90vh;
 	background-image: url(../assets/background_search.svg);
 	background-size: 60%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-#page-search header{
+.search header{
     margin-top: 48px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-	justify-content: space-between;
 }
 
-#page-search header a{
-	position: fixed;
-	margin-left: 1225px;
-	font-size: 18px;
+.search header a{
+	display: flex;
+    font-size: 18px;
+    align-items: center;
 }
 
-#page-search header h6 a{
-    position: absolute;
-    margin-left: 1315px;
-    font-weight: 400;
-    top: 36px;
+.search header h6 a{
+    display: flex;
+    font-size: 16px;
+    align-items: center;
 	
 }
 
-#page-search header span{
-	position: absolute;
+.search header span{
+	margin-right: 5px;
     background-image: url(../assets/enter.svg);
+    display: flex;
     width: 32px;
     height: 32px;
-    right: 90px;
-    bottom: -1px;
 }
 
 .content form{
-    position: absolute;
-    margin-top: 230px;
-    margin-left: 420px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 200px;
     padding: 10px;
 }
 .content form label {
     font-size: 20px;
-    display: block;
-    margin-bottom: 8px;
-    margin-left: 20px;
+    display: flex;
+    margin-bottom: 75px;
+    
 }
 .content form .search-field{
     display: flex;

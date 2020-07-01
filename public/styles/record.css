@@ -1,24 +1,28 @@
+#page-record{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
 #page-record .content header{
     margin-top: 48px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-	justify-content: space-between;
 }
 
 #page-record .content header a{
-	position: absolute;
-	margin-left: 1225px;
-	font-size: 18px;
+	display: flex;
+    font-size: 18px;
+    align-items: center;
 }
 
 #page-record .content header span{
-	position: absolute;
+	margin-right: 5px;
     background-image: url(../assets/enter.svg);
+    display: flex;
     width: 32px;
     height: 32px;
-    right: 60px;
-    bottom: -1px;
 
 }
 
