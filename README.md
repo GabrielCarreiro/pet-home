@@ -1,13 +1,7 @@
 # PetHome
- Aplicação web para localizar o petshop mais proximo da sua região.
-
- Tecnologias utilizadas  ->
-
- .Nunjucks
- .Node.Js
- .Sqlite3
- .JavaScript
- .VSCODE
+ 
+<p aligin="center"> <strong> Aplicação web para localizar o petshop mais proximo da sua região. </strong> </p>
+ 
 
  A aplicação PetHome ajuda a localizar os pet shops, e locais de adoção de pet's da sua cidade. 
  Caso precise você também pode cadastrar um local no sistema, atendendo todos os requisitos solicidados 
