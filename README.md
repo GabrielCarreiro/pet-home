@@ -1,5 +1,5 @@
 <h1 align="center"> PetHome </h1>
-<p aligin="center"> <strong> Aplicação web </strong> para localizar o petshop mais proximo da sua região.  </p>
+<p align="center"> <strong> Aplicação web </strong> para localizar o petshop mais proximo da sua região.  </p>
 
 
 <p align="center">
