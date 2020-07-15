@@ -11,18 +11,14 @@
     align-items: center;
 }
 
-#page-record .content header a{
-	display: flex;
-    font-size: 18px;
-    align-items: center;
-}
-
 #page-record .content header span{
 	margin-right: 5px;
-    background-image: url(../assets/enter.svg);
+    background-image: url(../assets/closer.png);
+    background-size: 105px;
+    background-repeat: no-repeat;
     display: flex;
-    width: 32px;
-    height: 32px;
+    width: 135px;
+    height: 100px;
 
 }
 

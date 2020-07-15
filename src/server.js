@@ -201,42 +201,7 @@ server.post("/savepoint", (req, res) => {
 
    
 
-// Configurando o caminho do search
 
-server.get("/search", (req, res) => {
-
-    return res.render("search.html")
-
-})
-
-// Configurando o caminho do page-results
-
-server.get("/page-results", (req, res) => {
-
-    const search = req.query.search
-
-
-    if(search == "" ){
-        
-        return res.render("page-results.html", {total: 0})
-
-    }
-
-    //pegar os dados do banco de dados
-
-        db.all(` SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
-        if(err) {
-            return console.log(err)
-        }
-
-        const total = rows.length
-
-
-        return res.render("page-results.html", { places: rows, total: total})
-    })
-    
-
-})
 
 // Ligar o servidor, listen é uma função que vai ouvir a porta 3000
 server.listen(3000)

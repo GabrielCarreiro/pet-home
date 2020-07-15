@@ -1,27 +1,28 @@
 {% extends "layout.html" %}
 
 {% block styles %}
-				<link rel="stylesheet" href="styles/login.css">
-				<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/login.css">
+<link rel="stylesheet" href="styles/responsive.css">
 {% endblock styles %}
 
 {% block content %}
 <section id="index">
 	<div class="page-login">
-					<div class="content">
-									<header>
-													<a href="/record">
-																	<span></span>Cadastra-se</a>
-									</header>
-									<div class="title">
-													<div>Pet<span>Home</span>
-													</div>
-									</div><br>
-									<div class="login">
-													<form action="/?" method="POST">
-																	<input type="text" placeholder="username" name="user"><br>
-																	<input type="password" placeholder="password" name="password"><br>
-																	<input type="submit" value="Login" ">
+		<div class="content">
+			<header>
+				<a href="/record"> <img src="/public/assets/closer.png" alt="">
+					<span> </span>
+				</a>
+			</header>
+			<div class="title">
+				<div>Pet<span>Home</span>
+				</div>
+			</div><br>
+			<div class="login">
+				<form action="/?" method="POST">
+					<input type="text" placeholder="username" name="user"><br>
+					<input type="password" placeholder="password" name="password"><br>
+					<input type="submit" value="Login" ">
 													</form>
 									</div>
 					</div>

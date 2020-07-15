@@ -34,28 +34,24 @@ body{
 	opacity: 0.7;
 	
 }
-
+ 
 .content header{
-    margin-top: 48px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-	justify-content: space-between;
 	
-	
-}
+} 
 
-.content header a{
-	position: absolute;
-	margin-left: 1225px;
-	font-size: 18px;
-}
+
 .content header span{
-	position: absolute;
-    background-image: url(../assets/enter.svg);
-    width: 32px;
-    height: 32px;
-    right: 105px;
-    bottom: -1px;
+	margin-right: 70px;
+    background-image: url(../assets/closer.png);
+    background-size: 105px;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 135px;
+    height: 100px;
+
 }
 
 

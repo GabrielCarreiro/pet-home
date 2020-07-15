@@ -1,92 +1,97 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    <title>Cadastra-se</title>
+<title>Cadastra-se</title>
 {% endblock title %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/styles/record.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
+<link rel="stylesheet" href="/styles/record.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 {% endblock styles %}
 
 {% block content %}
-    <div id="page-record">
+<div id="page-record">
 
-        {% if results > 0 %}
+    {% if results > 0 %}
 
-            <div class="alert">
-                <h2>
-                    Usuario já cadastrado !</h2>
-            </div>
-            <script>
-
-                setTimeout(() => {
-                    window.location = "/record"
-
-                }, 2000)
-            </script>
-        {% else %}
-            <div class="content">
-                <header>
-                    <a href="/">
-                        <span></span>
-                        Voltar
-                    </a>
-                </header>
-                <form action="/saveuser" method="POST">
-                    <legend>
-                        <h2>Dados do Usuário
-                        </h2>
-                    </legend>
-                    <div class="field-group">
-                        <div class="field">
-                            <label for="name">
-                                Digite seu nome
-                            </label>
-                            <input type="text" name="name" placeholder="Digite seu nome completo" minlength="4" required="required">
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="field">
-                            <label for="user">
-                                Usuario
-                            </label>
-                            <input type="text" name="user" placeholder="O usuário deve ter no minimo 5 carácter" maxlength="15" minlength="5" required="required">
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="field">
-                            <label for="password">
-                                Digite sua senha
-                            </label>
-                            <input type="password" id="password" name="password" placeholder="Sua senha deve ter no minimo 8 carácter" maxlength="12" minlength="8" required="required" onkeyup="validandoSenha()">
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="field">
-                            <label for="confirm_password">
-                                Digite sua senha novamente
-                            </label>
-                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Digite sua senha novamente" maxlength="12" minlength="8" required="required" disabled="disabled">
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="field">
-                            <label for="email">
-                                Email
-                            </label>
-                            <input type="text" name="email" placeholder="Digite seu email" minlength="8" onkeyup="Verifica()">
-                        </div>
-                    </div>
-                    <button type="submit" id="envia" disabled="disabled">
-                        Cadastrar
-                    </button>
-
-                </form>
-            </div>
-
-        {% endif %}
-
+    <div class="alert">
+        <h2>
+            Usuario já cadastrado !</h2>
     </div>
-    <script src="/scripts/record.js"></script>
+    <script>
+
+        setTimeout(() => {
+            window.location = "/record"
+
+        }, 2000)
+    </script>
+    {% else %}
+    <div class="content">
+        <header>
+            <a href="/"> <img src="/public/assets/closer.png" alt="">
+                <span> </span>
+            </a>
+        </header>
+        <form action="/saveuser" method="POST">
+            <legend>
+                <h2>Dados do Usuário
+                </h2>
+            </legend>
+            <div class="field-group">
+                <div class="field">
+                    <label for="name">
+                        Digite seu nome
+                    </label>
+                    <input type="text" name="name" placeholder="Digite seu nome completo" minlength="4"
+                        required="required">
+                </div>
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="user">
+                        Usuario
+                    </label>
+                    <input type="text" name="user" placeholder="O usuário deve ter no minimo 5 carácter" maxlength="15"
+                        minlength="5" required="required">
+                </div>
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="password">
+                        Digite sua senha
+                    </label>
+                    <input type="password" id="password" name="password"
+                        placeholder="Sua senha deve ter no minimo 8 carácter" maxlength="12" minlength="8"
+                        required="required" onkeyup="validandoSenha()">
+                </div>
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="confirm_password">
+                        Digite sua senha novamente
+                    </label>
+                    <input type="password" id="confirm_password" name="confirm_password"
+                        placeholder="Digite sua senha novamente" maxlength="12" minlength="8" required="required"
+                        disabled="disabled">
+                </div>
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="text" name="email" placeholder="Digite seu email" minlength="8" onkeyup="Verifica()">
+                </div>
+            </div>
+            <button type="submit" id="envia" disabled="disabled">
+                Cadastrar
+            </button>
+
+        </form>
+    </div>
+
+    {% endif %}
+
+</div>
+<script src="/scripts/record.js"></script>
 {% endblock content %}
