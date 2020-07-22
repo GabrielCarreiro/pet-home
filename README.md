@@ -27,7 +27,7 @@
 <strong> Passo 3 > </strong> <i> Após a instalação das ferramentas você deve abrir o terminal do seu computador. </i><br>
 <strong> Passo 4 > </strong> <i> Altere o diretório de trabalho atual para o local em que deseja salvar. (exemplo: cd desktop).</i><br>
 <strong> Passo 5 > </strong> <i> Faça um clone desse repositório rodando: `git clone https://github.com/Gabrielcarreiro/PetHome`</i><br>
-<strong> Passo 6 > </strong> <i> Depois de clonar o repositório entre na pasta rodando pelo terminal: `cd PetHome`; </i><br>
+<strong> Passo 6 > </strong> <i> Depois de clonar o repositório entre na pasta rodando pelo terminal: `cd pet-home`; </i><br>
 <strong> Passo 7 > </strong> <i> Digite `npm i` para instalar as dependências do projeto e aguarde. </i><br>
 <strong> Passo 8 > </strong> <i> Digite `npm start` para iniciar o servidor de desenvolvimento e aguardo a execução.</i><br>
 
