@@ -20,33 +20,27 @@ h2 {
 }
 
 #page-results header{
-    margin-top: 48px;
+    margin-top: 15px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-#page-results header a{
-	
-    display: flex;
-    font-size: 18px;
-    align-items: center;
-
-}
-
 #page-results header span{
 
-	margin-right: 5px;
-    background-image: url(../assets/enter.svg);
+    margin-right: -70px;
+    margin-top: 20px;
+    background-image: url(../assets/voltar.png);
+    background-size: 115px;
+    background-repeat: no-repeat;
     display: flex;
-    width: 32px;
-    height: 32px;
-    
-    
+    width: 140px;
+    height: 100px;
 }
 
 main{
-    margin-top: 90px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 main .cards{

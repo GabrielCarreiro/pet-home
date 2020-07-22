@@ -5,30 +5,27 @@
 }
 
 #create-place header{
-    margin-top: 48px;
+    margin-top: 15px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-#create-place header a{
-	display: flex;
-    font-size: 18px;
-    font-weight: 300;
-    align-items: center;
-}
 
 #create-place header span{
-	margin-right: 5px;
-    background-image: url(../assets/enter.svg);
+    margin-right: 5px;
+    margin-top: 20px;
+    background-image: url(../assets/voltar.png);
+    background-size: 115px;
+    background-repeat: no-repeat;
     display: flex;
-    width: 32px;
-    height: 32px;
+    width: 140px;
+    height: 100px;
 }
 
 form{
     background-color: white;
-    margin: 80px auto;
-    margin-top: 80px;
+    margin: 40px auto;
+    margin-top: 10px;
     padding: 40px;
     border-radius: 8px;
     max-width: 700px;

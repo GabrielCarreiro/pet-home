@@ -1,17 +1,19 @@
 #page-record{
     width: 90%;
     max-width: 1100px;
+    max-height: 100px;
     margin: 0 auto;
 }
 
 #page-record .content header{
-    margin-top: 48px;
+    margin-top: 15px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 #page-record .content header span{
+    display: flex;
 	margin-right: 5px;
     background-image: url(../assets/closer.png);
     background-size: 105px;
@@ -19,13 +21,13 @@
     display: flex;
     width: 135px;
     height: 100px;
-
 }
+
 
 form{
     background-color: white;
-    margin: 500px auto;
-    margin-top: 80px;
+    margin: 35px auto;
+    margin-top: 0;
     padding: 64px;
     border-radius: 8px;
     max-width: 550px;

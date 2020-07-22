@@ -1,8 +1,9 @@
 
 body{
+	width: 90%;
 	margin: 0;
 	padding: 0;
-	background: #fff;
+	background: #eed3cc;
 	color: #fff;
 	font-family: Arial;
 	font-size: 12px;
@@ -13,12 +14,10 @@ body{
 	position: absolute;
     width: 100vw;
 	height: 100vh;
-	background-image: url(../assets/background.svg);
+	background-image: url(../assets/background02.svg);
 	background-repeat: no-repeat;
-	background-size: 85%;
-	background-position: center center;
-	
-	 
+	background-size: 45%;
+	background-position: center center; 
 }
 
 .content{
@@ -29,36 +28,34 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00000000), color-stop(100%,rgba(0, 0, 0, 0.164)));
 	z-index: 1;
-	opacity: 0.7;
-	
+	opacity: 1;
 }
  
 .content header{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-	
+    align-items: center;	
 } 
 
 
 .content header span{
-	margin-right: 70px;
-    background-image: url(../assets/closer.png);
-    background-size: 105px;
+	margin-top: 10px;
+	margin-right: 100px;
+    background-image: url(../assets/cadastrar.png);
+    background-size: 135px;
     background-repeat: no-repeat;
     display: flex;
-    width: 135px;
+    width: 140px;
     height: 100px;
-
 }
 
 
 .title{
 	position: absolute;
 	top: calc(50% - 135px);
-	left: calc(50% - 70px);
+	left: calc(50% - 80px);
 	z-index: 2;
 }
 
@@ -67,18 +64,18 @@ body{
 	color: #fff;
 	font-family: 'Exo', sans-serif;
 	font-size: 40px;
-	font-weight: 200;
+	font-weight: 400;
 	
 }
 
 .title div span{
-	color: #010497;
+	color: #000;
 }
 
 .login{
 	position: absolute;
 	top: calc(50% - 75px);
-	left: calc(50% - 125px);
+	left: calc(50% - 135px);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
@@ -89,7 +86,7 @@ body{
 	width: 250px;
 	height: 30px;
 	background: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
+	border: 2px solid rgb(255, 255, 255);
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
@@ -102,7 +99,7 @@ body{
 	width: 250px;
 	height: 30px;
 	background: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
+	border: 2px solid rgba(255,255,255,255);
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;

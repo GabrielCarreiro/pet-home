@@ -15,39 +15,29 @@
 }
 
 .search header{
-    margin-top: 48px;
+    margin-top: 15px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
 
-.search header a{
-	display: flex;
-    font-size: 18px;
-    align-items: center;
-}
-
-.search header h6 a{
-    display: flex;
-    font-size: 16px;
-    align-items: center;
-	
 }
 
 .search header span{
-	margin-right: 5px;
-    background-image: url(../assets/enter.svg);
+    margin-right: 5px;
+    margin-top: 20px;
+    background-image: url(../assets/registrar.png);
+    background-size: 135px;
+    background-repeat: no-repeat;
     display: flex;
-    width: 32px;
-    height: 32px;
+    width: 140px;
+    height: 100px;
 }
 
 .content form{
-    
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 10px;
 }
 .content form label {
