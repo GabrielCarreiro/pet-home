@@ -1,3 +1,8 @@
+<img src="https://i.imgur.com/MuXpvbs.png" width="400"> <img src="https://i.imgur.com/QSc905y.png" width="400">
+<img src="https://i.imgur.com/dbTcP5X.png" width="400"> <img src="https://i.imgur.com/J0A00xq.png" width="400">
+
+![](https://media2.giphy.com/media/KHEK012pM1q1j3PGwj/giphy.gif)
+
 <h1 align="center"> PetHome </h1>
 <p align="center"> <strong> Aplicação web </strong> para localizar o petshop mais proximo da sua região.  </p>
 
